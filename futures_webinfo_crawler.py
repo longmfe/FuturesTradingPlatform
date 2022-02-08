@@ -2,6 +2,8 @@ import requests
 import re
 import time
 import pandas as pd
+import sys
+
 #from bs4 import BeautifulSoup
 #soup = BeautifulSoup(r.text, 'lxml')
 
@@ -21,19 +23,29 @@ import pandas as pd
 #    fp.writelines('\n')
 #fp.close()
 
+# url pattern? web element pattern
 url_patten = '''style="color: #1F82D2;font-size: 18px;font-weight: bold;" href="(.*)">
 				(.*)
 				<a class="jqxx">(.*)年度</a>'''
+
+# create url list to crawler
 url_list = []
-for i in range (1,76):
-    r = requests.get('http://kyqgs.mnr.gov.cn/search_bar.jspx?year1=98&year2=95&year3=182&pageNo='
+# range 76 pageNo=i _goPs=i
+for i in range (1,10):
+    r = 'http://kyqgs.mnr.gov.cn/search_bar.jspx?year1=98&year2=95&year3=182&pageNo='
     + str (i)
     +'&firstListTotalCount=27&secondListTotalCount=348&thirdListTotalCount=0&fourthListTotalCount=0&searchParams=%E6%B5%B7%E8%9E%BA%E6%B0%B4%E6%B3%A5&pagecount=75&times=&kuangquans=kq-0&areas=dq-0&_goPs='
     + str (i))
+
+    print(r)
+
+    r = requests.get(r)
+
     url_list += list(set(re.findall(url_patten, r.text)))
     time.sleep(3)
 
-fp = open(r'f:\test1.txt', 'w')
+# url list output to txt file
+fp = open(r'test1.txt', 'w')
 for i in range(len(url_list)):
     for j in range(len(url_list[i])):
         fp.writelines(url_list[i][j])
@@ -41,7 +53,13 @@ for i in range(len(url_list)):
     fp.writelines('\n')
 fp.close()
 
-fp = open(r'f:\test3.txt', 'r')
+print("url_list")
+print(url_list)
+
+sys.exit()
+
+# test3.txt?
+fp = open(r'test1.txt', 'r')
 url_list = fp.readlines()
 for i in range(len(url_list)):
     url_list[i] = url_list[i].replace('\n','')
@@ -87,3 +105,4 @@ for i in url_list:
     df = df.append(Ser, ignore_index=True)
     time.sleep(5)
 df.to_excel(r'f:\test1.xlsx', sheet_name= 'test')
+
