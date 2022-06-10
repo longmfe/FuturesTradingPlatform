@@ -1,0 +1,8 @@
+marketaddr tcp://180.169.50.131:42213
+traderaddr tcp://180.169.50.131:42205
+brokerid 2071
+appid client_DYLHL_1
+authcode 20220307DYLHL001
+userid 82400866
+pwd ab123456
+instrument T2006
