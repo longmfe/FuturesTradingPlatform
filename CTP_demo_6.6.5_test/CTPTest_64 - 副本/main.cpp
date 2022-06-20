@@ -21,7 +21,6 @@
 #include<string.h>
 #include <fstream>
 #include <stdio.h>
-#include "MarketApplication.h"
 //#include <unistd.h>
 using namespace std;
 
@@ -51,7 +50,6 @@ const char* g_helpInfo[] = {
 bool flag = true;
 CUser *tsh; // trade api
 CMd *msh; // market api
-MarketApplication* cctphandle;
 
 std::string Trim(const std::string & str1, const string& token= " \t\n\r", int type=0)
 {
@@ -421,7 +419,7 @@ int main() {
 	getConfig();
 
 	tsh = new CUser();
-	msh = new CMd(cctphandle);
+	msh = new CMd();
 	tsh->Init();
 	msh->Init();
 	tsh->ReqUserLogin();

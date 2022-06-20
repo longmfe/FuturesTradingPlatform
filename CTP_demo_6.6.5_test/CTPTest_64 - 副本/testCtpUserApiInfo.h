@@ -255,27 +255,8 @@ public:
 		}
 		return re;
 	}
-
-	int ReqQryPosition(SOrderParam* param) {
-		cout << "::PutOrder" << "\t";
-		cout << "instrumentID" << param->instrumentId << endl;
-		cout << "exchangeID" << param->exchangeId << endl;
-		cout << "volume" << param->volume;
-		cout << "price" << param->price;
-
-		CThostFtdcQryInvestorPositionField qrypositionfield = { 0 };
-		m_pUserApi->ReqQryInvestorPosition(&qrypositionfield, 0);
-
-		return 0;
-	}
-
 	int PutOrder(SOrderParam* param) {
 		cout << "::PutOrder" << "\t";
-		cout << "instrumentID" << param->instrumentId << endl;
-		cout << "exchangeID" << param->exchangeId << endl;
-		cout << "volume" << param->volume;
-		cout << "price" << param->price;
-
 		CThostFtdcInputOrderField req;
 		memset(&req, 0, sizeof(req));
 
@@ -439,6 +420,12 @@ public:
 		return re;
 	}
 
+	void QryPosition() {
+		CThostFtdcQryInvestorPositionField qrypositionfield = { 0 };
+		int re = m_pUserApi->ReqQryInvestorPosition(&qrypositionfield, 0);
+		cout << re << endl;
+	}
+
 	//认证成功后发起登录
 	virtual void OnRspAuthenticate(CThostFtdcRspAuthenticateField *pRspAuthenticateField, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {
 		
@@ -495,7 +482,6 @@ public:
 	{
 		if (pInputOrder) {
 			cout << "::OnRspOrderInsert" << "\t";
-			
 			cout << pInputOrder->InstrumentID << "|" << pInputOrder->Direction;
 			cout << "|" << pInputOrder->LimitPrice << "|" << (long)pInputOrder->VolumeTotalOriginal << "|" << pInputOrder->CombOffsetFlag[0];
 			if (pRspInfo && pRspInfo->ErrorID) {
@@ -592,10 +578,6 @@ public:
 			cout <<  pOrder->InstrumentID << "|" << pOrder->Direction;
 			cout << "|" << pOrder->LimitPrice << "|" << (long)pOrder->VolumeTotal << "|" << pOrder->CombOffsetFlag[0];
 			cout << "|" << GetStatusDsp(pOrder->OrderStatus) << "|" << pOrder->OrderSysID << "\t" <<pOrder->StatusMsg<<"\t";
-
-			cout << "OrderSysID" << pOrder->OrderSysID << endl;
-			cout << "InstrumentID" << pOrder->InstrumentID << endl;
-			cout << "ExchangeID" << pOrder->ExchangeID << endl;
 		}
 		//QryOrder();
 		cout << endl;
@@ -657,6 +639,8 @@ public:
 		cout << endl;
 	}
 	
+	// 仓位查询
+
 private:
 	CThostFtdcTraderApi *m_pUserApi = NULL;
 	int RequestID = 0;

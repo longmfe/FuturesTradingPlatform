@@ -121,29 +121,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AccountManage.cpp" />
-    <ClCompile Include="AlgoManager.cpp" />
-    <ClCompile Include="CTPClass.cpp" />
     <ClCompile Include="Lock.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MarketApplication.cpp" />
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="TickData.cpp" />
     <ClCompile Include="toolsClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AccountManage.h" />
-    <ClInclude Include="AlgoManager.h" />
     <ClInclude Include="Config.h" />
-    <ClInclude Include="CTPClass.h" />
     <ClInclude Include="CtpMdApiInfo.h" />
     <ClInclude Include="CtpUserApiInfo.h" />
     <ClInclude Include="CtpUserApiInfo_test.h" />
     <ClInclude Include="Lock.h" />
-    <ClInclude Include="MarketApplication.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="TickData.h" />
     <ClInclude Include="toolsClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
