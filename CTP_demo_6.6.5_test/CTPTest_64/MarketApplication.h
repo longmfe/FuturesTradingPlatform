@@ -7,6 +7,8 @@
 //#include "MdSpi.h"
 #include <map>
 #include "TickData.h"
+#include "AlgoManager.h"
+
 //#include "KeepRecord.h"
 
 using namespace std;
@@ -34,7 +36,7 @@ private:
 	CMdSpi* pUserMdSpi;
 public:
 	void checkDate(string date1);
-	//void setFC(CTPClass* fc);
+	void setFC(CTPClass* fc);
 
 	void initial();
 

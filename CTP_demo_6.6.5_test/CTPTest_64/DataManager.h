@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "TickData.h"
@@ -7,7 +8,8 @@ using namespace std;
 
 
 class DataManager
-{public :
+{
+public :
     DataManager();
 
     ~DataManager();
@@ -31,4 +33,4 @@ class DataManager
 	void setlist(TickData * value);
 
 	TickData* pRcMarketData(string contractname);
-}
+};

@@ -104,6 +104,7 @@ string AlgoManager::getPz(string con)
 void AlgoManager::OnMarketData(string con, double lastp, double lastV, double askp, double askV,
 		         double bidP, double bidV, double openI, double tradeV, string date, string time)
 {
+	cout << "AlgoManager::OnMarketData" << endl;
 	string pz = con;//getPz(con);
 	if(pz.length() < 1)
 	{
@@ -147,6 +148,7 @@ void AlgoManager::OnMarketData(string con, double lastp, double lastV, double as
 	}
 	*/
 	if(bRealMarket && strcmp(time.c_str(),"150000") >= 0){
+		cout << "AlgoManager::bRealMarket" << endl;
 		string pinzhong = getPz(con);
 		map<string, map<string, double>>::iterator iit;
 		//pLog->addlog("TradeVolume£º" + pinzhong + "," + con + "," + tc.doubleToString(tradeV));

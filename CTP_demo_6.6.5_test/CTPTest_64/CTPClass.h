@@ -9,6 +9,7 @@
 //#include "ExecReport.h"
 //#include "KeepRecord.h"
 #include "AlgoManager.h"
+
 //#include "contractDetail.h"
 
 class TradeApplication;

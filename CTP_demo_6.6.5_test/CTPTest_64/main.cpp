@@ -51,7 +51,7 @@ const char* g_helpInfo[] = {
 bool flag = true;
 CUser *tsh; // trade api
 CMd *msh; // market api
-MarketApplication* cctphandle;
+MarketApplication* cctphandle = new MarketApplication();
 
 std::string Trim(const std::string & str1, const string& token= " \t\n\r", int type=0)
 {

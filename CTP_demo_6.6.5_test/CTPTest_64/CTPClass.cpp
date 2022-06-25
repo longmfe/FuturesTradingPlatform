@@ -1,6 +1,9 @@
+#pragma once
 #include "StdAfx.h"
 #include "CTPClass.h"
 #include <list>
+#include "DataManager.h"
+
 using namespace std;
 //extern GlobalDataManage* pGlobalDm;
 
@@ -10,7 +13,7 @@ CTPClass::CTPClass(AlgoManager* agm1)//:
 	isTradeLogon = false;
 	isMDLogon = false;
 	this->fixMD = new MarketApplication() ;
-	//this->fixMD->setFC(this);
+	this->fixMD->setFC(this);
 	//this->fixTrader =new TradeApplication() ;
 	//this->fixTrader->setFC(this);
 	orderRef = 0;
@@ -18,6 +21,9 @@ CTPClass::CTPClass(AlgoManager* agm1)//:
 }
 
 void CTPClass::UpdateMarket(TickData tdtmp){
+	cout << "CTPClass::UpdateMarket" << endl;
+	DataManager* dm = new DataManager();
+	dm->recordMarketData(&tdtmp);
 	//algotseng->process(tdtmp); no suck fuction in AlgoTSEng 
 	// add bypass fucntion
 	//void process(string con, double lastp, double lastV, double askp, double askV,

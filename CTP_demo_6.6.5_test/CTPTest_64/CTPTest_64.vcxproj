@@ -123,6 +123,7 @@
     <ClCompile Include="AccountManage.cpp" />
     <ClCompile Include="AlgoManager.cpp" />
     <ClCompile Include="CTPClass.cpp" />
+    <ClCompile Include="DataManager.cpp" />
     <ClCompile Include="Lock.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MarketApplication.cpp" />
@@ -138,7 +139,7 @@
     <ClInclude Include="CTPClass.h" />
     <ClInclude Include="CtpMdApiInfo.h" />
     <ClInclude Include="CtpUserApiInfo.h" />
-    <ClInclude Include="CtpUserApiInfo_test.h" />
+    <ClInclude Include="DataManager.h" />
     <ClInclude Include="Lock.h" />
     <ClInclude Include="MarketApplication.h" />
     <ClInclude Include="Order.h" />

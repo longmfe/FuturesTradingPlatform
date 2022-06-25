@@ -29,6 +29,7 @@ DataManager::~DataManager()
 
 void DataManager::recordMarketData(TickData *value)
 {
+	cout << "recordMarketData" << endl;
 	list<TickData*> tmpl;
 	list<TickData*>::iterator ptmpl;
 	map<string,list<TickData*>>::iterator mapit;
@@ -44,7 +45,16 @@ void DataManager::recordMarketData(TickData *value)
 		mapit->second.push_back(value);
 	};
 
-
+	map<string, list<TickData*>>::iterator itr;
+	for (itr = RcMarketDataMap.begin(); itr != RcMarketDataMap.end(); itr++)
+	{
+		cout << "first:" << itr->first << endl;
+		list<TickData*>::iterator p1;
+		for (TickData* td:itr->second) {
+			cout << td->getAskPrice() << endl;
+		}
+		
+	}
 
 };
 
