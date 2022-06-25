@@ -3,9 +3,6 @@
 //#include "readProperty.h"
 //#include "UtilFun.h"
 MarketApplication* ta= nullptr;
-bool bRealMarket = true;
-bool bRealTrade = false;
-AlgoManager* algomanager = new AlgoManager(bRealMarket, bRealTrade);
 
 
 
@@ -20,6 +17,16 @@ MarketApplication::MarketApplication(void)//:
 	
 }
 
+MarketApplication::MarketApplication(CTPClass* ctp)//:
+//kc("MarketSessionLogInfo")
+{
+	isLogon = false;
+	rm = NULL;
+	pUserMdSpi = NULL;
+	ta = this;
+	this->fc = ctp;
+
+}
 
 MarketApplication::~MarketApplication(void)
 {
@@ -44,7 +51,6 @@ void MarketApplication::setFC(CTPClass* fc)
 void MarketApplication::onMarketdata(TickData td)
 {
 	cout << "MarketApplication::onMarketdata" << endl;
-	CTPClass* ctp = new CTPClass(algomanager);
-	setFC(ctp);
+	
 	this->fc->UpdateMarket(td);
 }

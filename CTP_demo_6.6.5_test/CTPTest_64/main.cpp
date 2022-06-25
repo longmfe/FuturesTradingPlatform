@@ -22,6 +22,8 @@
 #include <fstream>
 #include <stdio.h>
 #include "MarketApplication.h"
+#include "CTPClass.h"
+#include "AlgoManager.h"
 //#include <unistd.h>
 using namespace std;
 
@@ -51,7 +53,12 @@ const char* g_helpInfo[] = {
 bool flag = true;
 CUser *tsh; // trade api
 CMd *msh; // market api
-MarketApplication* cctphandle = new MarketApplication();
+bool bRealMarket = true;
+bool bRealTrade = false;
+AlgoManager* algomanager = new AlgoManager(bRealMarket, bRealTrade);
+CTPClass* ctp = new CTPClass(algomanager);
+MarketApplication* cctphandle = new MarketApplication(ctp);
+//CTPClass TODO:
 
 std::string Trim(const std::string & str1, const string& token= " \t\n\r", int type=0)
 {

@@ -25,6 +25,7 @@ class MarketApplication
 {
 public:
 	MarketApplication(void);
+	MarketApplication(CTPClass* ctp);
 	~MarketApplication(void);
 private:
 	CTPClass* fc;
