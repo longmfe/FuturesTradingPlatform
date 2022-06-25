@@ -1,0 +1,5 @@
+password=213519
+username=02001
+tradelink=tcp://ctpfz1-front1.citicsf.com:51205
+mdlink=tcp://ctpfz1-front1.citicsf.com:51213
+brokerID=66666

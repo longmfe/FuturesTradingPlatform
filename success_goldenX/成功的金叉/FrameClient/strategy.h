@@ -1,0 +1,20 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include "CTPClass.h"
+#include "Order.h"
+#include "AlgoManager.h"
+#include <list>
+#include "StrategyUnit.h"
+#include "SendToLocal.h"
+#include "Bar.h"
+#include "BarValue.h"
+#include "TickData.h"
+#include "Order.h"
+#include "ATR.h"
+#include "MACD.h"
+using namespace std;
+class AlgoTSEng;
+class SendToLocal;
+class ATR;
+class MACD;

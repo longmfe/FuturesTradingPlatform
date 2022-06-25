@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4163603A-97B0-4C94-9992-9AF809C4F262}</ProjectGuid>
+    <RootNamespace>FrameClient</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>ES_StrategyA</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ReferencePath>
+    <EmbedManifest>false</EmbedManifest>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Documents and Settings\lenovo\桌面\bench\QRC RemoteClient_Alpha\FrameClientC\FrameClientC\MyLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\MyLib\Remoting.dll" />
+    <None Include="..\MyLib\TradingLab.dll" />
+    <None Include="..\MyLib\WinRemoteClient_Alpha.dll">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Doc\QRC_ProductInfoFile.jpg" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\FrameClient.ico" />
+    <None Include="res\FrameClient.rc2" />
+    <None Include="thosttraderapi.dll" />
+    <None Include="ThostTraderApi\thostmduserapi.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AccountManage.h" />
+    <ClInclude Include="AlgoManager.h" />
+    <ClInclude Include="AlgoTSEng.h" />
+    <ClInclude Include="ATR.h" />
+    <ClInclude Include="Bar.h" />
+    <ClInclude Include="BarValue.h" />
+    <ClInclude Include="BarDaily.h" />
+    <ClInclude Include="CloseIndexUnit.h" />
+    <ClInclude Include="ComputeIndex.h" />
+    <ClInclude Include="ComputeIndexUnit.h" />
+    <ClInclude Include="Contract.h" />
+    <ClInclude Include="contractDetail.h" />
+    <ClInclude Include="ContractsManage.h" />
+    <ClInclude Include="CTPClass.h" />
+    <ClInclude Include="DealOrdersLocal.h" />
+    <ClInclude Include="DealSendedOrderUnit.h" />
+    <ClInclude Include="DoubleIndexValue.h" />
+    <ClInclude Include="ESproductInfo.h" />
+    <ClInclude Include="ExecReport.h" />
+    <ClInclude Include="FlowManage.h" />
+    <ClInclude Include="FlowUnits.h" />
+    <ClInclude Include="FrameClient.h" />
+    <ClInclude Include="FrameClientDlg.h" />
+    <ClInclude Include="GlobalDataManage.h" />
+    <ClInclude Include="HeartBeatMsg.h" />
+    <ClInclude Include="HighIndexUnit.h" />
+    <ClInclude Include="IndexDetailUnit.h" />
+    <ClInclude Include="IndexManage.h" />
+    <ClInclude Include="IndexUnit.h" />
+    <ClInclude Include="IndexValue.h" />
+    <ClInclude Include="IndexValueBase.h" />
+    <ClInclude Include="KeepRecord.h" />
+    <ClInclude Include="Lock.h" />
+    <ClInclude Include="LowIndexUnit.h" />
+    <ClInclude Include="MACD.h" />
+    <ClInclude Include="MarketApplication.h" />
+    <ClInclude Include="MarketdataManage.h" />
+    <ClInclude Include="MAUnit.h" />
+    <ClInclude Include="MdSpi.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="mLog.h" />
+    <ClInclude Include="MsgType.h" />
+    <ClInclude Include="OpenIndexUnit.h" />
+    <ClInclude Include="Order.h" />
+    <ClInclude Include="OrdersManage.h" />
+    <ClInclude Include="Position.h" />
+    <ClInclude Include="PositionManage.h" />
+    <ClInclude Include="QRCadapter.h">
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
+      <MinimalRebuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</MinimalRebuild>
+      <ExceptionHandling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExceptionHandling>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</BasicRuntimeChecks>
+      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</BufferSecurityCheck>
+    </ClInclude>
+    <ClInclude Include="readContracts.h" />
+    <ClInclude Include="readIni.h" />
+    <ClInclude Include="readInstanceCfg.h" />
+    <ClInclude Include="readMe.h" />
+    <ClInclude Include="readProperty.h" />
+    <ClInclude Include="ReqIndexMsg.h" />
+    <ClInclude Include="ReqIndexUnit.h" />
+    <ClInclude Include="ReqLoginMsg.h" />
+    <ClInclude Include="ReqLogoutMsg.h" />
+    <ClInclude Include="ReqMdMsg.h" />
+    <ClInclude Include="ReqMdUnit.h" />
+    <ClInclude Include="RequestStore.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RspIndexMsg.h" />
+    <ClInclude Include="RspLoginMsg.h" />
+    <ClInclude Include="RspMdMsg.h" />
+    <ClInclude Include="rwArgsFile.h" />
+    <ClInclude Include="rwIndexFile.h" />
+    <ClInclude Include="Security.h" />
+    <ClInclude Include="SendOrder.h" />
+    <ClInclude Include="SendToLocal.h" />
+    <ClInclude Include="SocketDama.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StrategyUnit.h" />
+    <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TestStrategy.h" />
+    <ClInclude Include="TestStrategyShort.h" />
+    <ClInclude Include="TickData.h" />
+    <ClInclude Include="toolsClass.h" />
+    <ClInclude Include="TradeApplication.h" />
+    <ClInclude Include="TraderSpi.h" />
+    <ClInclude Include="UtilFun.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AccountManage.cpp" />
+    <ClCompile Include="AlgoManager.cpp" />
+    <ClCompile Include="AlgoTSEng.cpp" />
+    <ClCompile Include="ATR.cpp" />
+    <ClCompile Include="Bar.cpp" />
+    <ClCompile Include="BarDaily.cpp" />
+    <ClCompile Include="BarValue.cpp" />
+    <ClCompile Include="CloseIndexUnit.cpp" />
+    <ClCompile Include="ComputeIndex.cpp" />
+    <ClCompile Include="ComputeIndexUnit.cpp" />
+    <ClCompile Include="Contract.cpp" />
+    <ClCompile Include="contractDetail.cpp" />
+    <ClCompile Include="ContractsManage.cpp" />
+    <ClCompile Include="CTPClass.cpp" />
+    <ClCompile Include="DealOrdersLocal.cpp" />
+    <ClCompile Include="DoubleIndexValue.cpp" />
+    <ClCompile Include="ESproductInfo.cpp" />
+    <ClCompile Include="ExecReport.cpp" />
+    <ClCompile Include="FrameClient.cpp" />
+    <ClCompile Include="FrameClientDlg.cpp" />
+    <ClCompile Include="GlobalDataManage.cpp" />
+    <ClCompile Include="HighIndexUnit.cpp" />
+    <ClCompile Include="IndexDetailUnit.cpp" />
+    <ClCompile Include="IndexManage.cpp" />
+    <ClCompile Include="IndexUnit.cpp" />
+    <ClCompile Include="IndexValue.cpp" />
+    <ClCompile Include="IndexValueBase.cpp" />
+    <ClCompile Include="KeepRecord.cpp" />
+    <ClCompile Include="Lock.cpp" />
+    <ClCompile Include="LowIndexUnit.cpp" />
+    <ClCompile Include="MACD.cpp" />
+    <ClCompile Include="MarketApplication.cpp" />
+    <ClCompile Include="MarketdataManage.cpp" />
+    <ClCompile Include="MAUnit.cpp" />
+    <ClCompile Include="MdSpi.cpp" />
+    <ClCompile Include="OpenIndexUnit.cpp" />
+    <ClCompile Include="Order.cpp" />
+    <ClCompile Include="OrdersManage.cpp" />
+    <ClCompile Include="Position.cpp" />
+    <ClCompile Include="PositionManage.cpp" />
+    <ClCompile Include="readProperty.cpp" />
+    <ClCompile Include="Security.cpp" />
+    <ClCompile Include="SendToLocal.cpp" />
+    <ClCompile Include="SocketDama.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TestStrategy.cpp" />
+    <ClCompile Include="TestStrategyShort.cpp" />
+    <ClCompile Include="TickData.cpp" />
+    <ClCompile Include="toolsClass.cpp" />
+    <ClCompile Include="TradeApplication.cpp" />
+    <ClCompile Include="TraderSpi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FrameClient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ThostTraderApi\thostmduserapi.lib" />
+    <Library Include="ThostTraderApi\thosttraderapi.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ALib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>MyLib\ALib.dll</HintPath>
+    </Reference>
+    <Reference Include="ALib.Data.CSVOperation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>MyLib\ALib.Data.CSVOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="ALib.Data.IO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>MyLib\ALib.Data.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Remoting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>MyLib\Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="TradingLab, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>MyLib\TradingLab.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRemoteClient_Alpha, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>MyLib\WinRemoteClient_Alpha.dll</HintPath>
+    </Reference>
+    <Reference Include="vshost32-clr2, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>MyLib\WinRemoteClient_Alpha.vshost.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="FrameClient.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

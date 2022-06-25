@@ -1,0 +1,5 @@
+password=198376
+username=003809
+tradelink=tcp://180.168.146.187:10000
+mdlink=tcp://180.168.212.228:41213
+brokerID=9999

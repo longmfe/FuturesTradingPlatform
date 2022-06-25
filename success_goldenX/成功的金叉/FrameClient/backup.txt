@@ -1,0 +1,13 @@
+config_csv
+password=123321
+username=00000005
+tradelink=tcp://180.166.165.179:41205
+mdlink=tcp://180.166.165.179:41213
+brokerID=1013
+
+fanzhen
+password=082715
+username=03127
+tradelink=tcp://101.231.96.18:51205
+mdlink=tcp://101.231.96.18:51213
+brokerID=66666
